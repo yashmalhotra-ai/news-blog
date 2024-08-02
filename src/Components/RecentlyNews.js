@@ -2,6 +2,10 @@ import React from 'react';
 import RecentlyNewsCard from '../Models/RecentlyNewsCard';
 import TopAuthorsCard from '../Models/TopAuthorsCard';
 import AdvertisementCard from '../Models/AdvertisementCard';
+import CategoriesCard from '../Models/CategoriesCard';
+import DailyUpdateCard from '../Models/DailyUpdateCard';
+import ImageGrid from '../Models/ImageGrid';
+import TagsBtn from '../Models/TagsBtn';
 
 const RecentlyNews = () => {
     return (
@@ -26,7 +30,32 @@ const RecentlyNews = () => {
                         <div className='mt-10'>
                             <AdvertisementCard />
                         </div>
-                        {/* Add content for Popular Posted section here */}
+                        <h3 className='font-semibold font-sans text-xl mt-20 rounded-sm'>
+                            <span className='bg-[#00AAA1] text-white '>Categories</span>
+                        </h3>
+                        <div className='w-full'>
+                            <CategoriesCard />
+                        </div>
+                        <h3 className='font-semibold font-sans text-xl mt-20 rounded-sm'>
+                            <span className='bg-[#00AAA1] text-white '>Today's</span>Update
+                        </h3>
+                        <div className='w-full'>
+                            <DailyUpdateCard />
+                        </div>
+                        <h3 className='font-semibold font-sans text-xl mt-20 rounded-sm'>
+                            <span className='bg-[#00AAA1] text-white '>Instagram</span>Post
+                        </h3>
+                        <div className='w-full'>
+                            <ImageGrid />
+
+                        </div>
+                        <h3 className='font-semibold font-sans text-xl mt-20 rounded-sm'>
+                            <span className='bg-[#00AAA1] text-white '>Seacrh </span>
+                            with Tags
+                        </h3>
+                        <div className='w-full'>
+                            <TagsBtn />
+                        </div>
                     </div>
                 </div>
             </div>
