@@ -3,7 +3,13 @@ setup react
 -> install react using create react app
 -> install tailwindCSS
 -> connected project with github repo
--> create folder stucture 
+-> Setup Routing npm i -D react-router-dom
+-> create folder stucture
+    scr
+    ->Components
+    ->Utils
+    ->Models
+-> create Component
 
 
 Frontend:
