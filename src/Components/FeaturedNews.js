@@ -8,8 +8,7 @@ const FeaturedNews = () => {
             <div className="px-5 py-12 mx-auto">
                 <h3 className='font-semibold font-sans text-xl'><span className='bg-[#00AAA1] text-white'>Featured</span> This Month</h3>
                 <div className="lg:w-full mx-auto flex flex-col lg:flex-row ">
-                    <div className='overflow-y-auto max-h-[500px] lg:w-2/3 w-full custom-scrollbar'>
-                        <FeatureNewsCard />
+                    <div className='w-full overflow-y-auto max-h-[550px] lg:w-2/3 custom-scrollbar overflow-x-hidden'>
                         <FeatureNewsCard />
                     </div>
 
@@ -25,3 +24,4 @@ const FeaturedNews = () => {
 };
 
 export default FeaturedNews;
+

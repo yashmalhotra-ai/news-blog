@@ -4,7 +4,6 @@ const RecentlyNewsCard = () => {
     const [data, setData] = useState([]);
 
     useEffect(() => {
-        console.log(process.env.REACT_APP_NEWSAPI_PAGEINATION_API)
         const fetchData = async () => {
             try {
                 const response = await fetch(process.env.REACT_APP_NEWSAPI_PAGEINATION_API)

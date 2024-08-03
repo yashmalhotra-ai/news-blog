@@ -3,7 +3,6 @@ setup react
 -> install react using create react app
 -> install tailwindCSS
 -> connected project with github repo
--> Setup Routing npm i -D react-router-dom
 -> install axios for fetching data
 -> create folder stucture
     scr
@@ -36,3 +35,5 @@ Frontend:
             -> Info card of website 
             ->Instagram post 
             ->Search with Tags
+->Fetch the API
+    ->Integrate with different Components
