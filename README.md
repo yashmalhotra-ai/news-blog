@@ -1,31 +1,56 @@
-PATH
-setup react 
--> install react using create react app
--> install tailwindCSS
--> connected project with github repo
--> create folder stucture 
+Frontend Structure
+App Page
+Header
 
+Includes navigation and branding elements.
+Hero Sections
 
-Frontend:
-->App page
-    -> Header
-    -> Half Hero Section (Featured News) and (Top News) Ratio of 70% / 30%
-            -> Featured News Section
-                ->Display 2 Card only rest item will be scrollable
-                    ->tpye of news,Title,img,author with img ,date,time to read,discription
-            ->Top News Section
-                ->Display 2 Info card 
-                    ->tpye of news,Title,author with img ,date,time to read,discription (no image)
-    ->2nd Hero section (recently posted) new news
-        -> multiline card
-            ->Total 9 multiline card in each page (Pagination requried)
-            ->type of news,Title,img,author with img ,date,time to read,discription
-        ->side bar news
-            ->top author
-                ->author card 
-                    ->name,social media details address
-            -> Ads card
-            ->Type of news table
-            -> Info card of website 
-            ->Instagram post 
-            ->Search with Tags
+Half Hero Section
+
+Featured News (70%)
+
+Display 2 Cards: Only the first two cards are visible initially; the rest are scrollable.
+News Type
+Title
+Image
+Author (with image)
+Date
+Time to Read
+Description
+Top News (30%)
+
+Display 2 Info Cards
+News Type
+Title
+Author (with image)
+Date
+Time to Read
+Description (no image)
+Second Hero Section
+
+Recently Posted News
+Multiline Cards
+Display a total of 9 multiline cards per page (pagination required).
+News Type
+Title
+Image
+Author (with image)
+Date
+Time to Read
+Description
+Sidebar News
+Top Authors
+
+Author Card
+Name
+Social Media Details
+Address
+Ads Card
+
+Type of News Table
+
+Info Card of Website
+
+Instagram Post
+
+Search with Tags
