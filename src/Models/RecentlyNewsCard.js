@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import useFormattedDate from '../Hooks/useFormattedDate';
+import FormattedDate from '../Utils/FormattedDate';
 const RecentlyNewsCard = () => {
     const [data, setData] = useState([]);
 
@@ -17,7 +17,7 @@ const RecentlyNewsCard = () => {
     }, [])
 
     const newsCard = data.map((item, index) => {
-        const newDate = useFormattedDate(item.publishedAt)
+        const newDate = FormattedDate(item.publishedAt)
         return (
             <React.Fragment key={item.source.id + item.source.id + index}>
                 <div className='flex flex-col md:flex-row gap-4 mt-4'>

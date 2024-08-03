@@ -1,7 +1,6 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
-import useFormattedDate from '../Hooks/useFormattedDate';
-
+import FormattedDate from '../Utils/FormattedDate';
 const FeatureNewsCard = () => {
     const [data, setData] = useState([]);
     useEffect(() => {
@@ -23,7 +22,7 @@ const FeatureNewsCard = () => {
 
     for (let i = 0; i < data.length; i += groupSize) {
         const group = data.slice(i, i + groupSize).map((item, index) => {
-            const newDate = useFormattedDate(item.publishedAt);
+            const newDate = FormattedDate(item.publishedAt);
             const cardContent = (
                 <div className='w-[48%]' key={i + index}>
                     <button className='bg-[#DFF1F0] p-[1px] rounded font-semibold text-[12px] text-[#666666]'>
