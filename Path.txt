@@ -37,3 +37,5 @@ Frontend:
             ->Search with Tags
 ->Fetch the API
     ->Integrate with different Components
+
+->Handled Null values from data and handled exceptional cases
