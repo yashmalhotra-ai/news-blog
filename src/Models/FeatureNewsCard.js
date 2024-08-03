@@ -2,15 +2,19 @@ import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import FormattedDate from '../Utils/FormattedDate';
 const FeatureNewsCard = () => {
-    const [data, setData] = useState([]);
+    const [data, setData] = useState([1, 2, 3, 4 ]);
     useEffect(() => {
         const fetchdata = async () => {
             try {
-                const response = await axios.get(process.env.REACT_APP_NEWSAPI_TOPNEWS);
+                const response = await axios.get(process.env.REACT_APP_NEWSAPI_TOPNEWS+'1');
+                console.log(response)
+                if (response.data.status != 'ok') {
+                    throw new Error("Error from api");
+                }
                 setData(response.data.articles)
 
             } catch (error) {
-                console.log("can't fetch feature news data", error);
+                console.error("can't fetch feature news data", error);
             }
         };
         fetchdata();

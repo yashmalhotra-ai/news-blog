@@ -1,16 +1,19 @@
 import React, { useEffect, useState } from 'react';
 import FormattedDate from '../Utils/FormattedDate';
 const RecentlyNewsCard = () => {
-    const [data, setData] = useState([]);
+    const [data, setData] = useState([1, 2, 3, 4,5,6,7,8,10,11,12]);
 
     useEffect(() => {
         const fetchData = async () => {
             try {
                 const response = await fetch(process.env.REACT_APP_NEWSAPI_PAGEINATION_API)
+                if (!response.ok) {
+                    throw new Error("Error Occur from API");
+                }
                 const temp = await response.json()
-                setData(temp.articles)
+                setData(temp.articles || [1, 2, 3, 4])
             } catch (error) {
-                console.log("Data can't be fetched", error);
+                console.error("Data can't be fetched", error);
             }
         }
         fetchData()
@@ -19,7 +22,7 @@ const RecentlyNewsCard = () => {
     const newsCard = data.map((item, index) => {
         const newDate = FormattedDate(item.publishedAt)
         return (
-            <React.Fragment key={item.source.id + item.source.id + index}>
+            <React.Fragment key={index}>
                 <div className='flex flex-col md:flex-row gap-4 mt-4'>
                     <div className='flex-shrink-0'>
                         <img className='rounded-lg max-w-xs md:max-w-sm ' width={250} height={200} src={item.urlToImage == null ? 'https://dummyimage.com/250x180' : item.urlToImage} alt="" />
@@ -48,7 +51,7 @@ const RecentlyNewsCard = () => {
                                 3 Min. To Read
                             </div>
                         </div>
-                        <p className="text-sm text-[#555555] font-medium mt-4">{item.description}</p>
+                        <p className="text-sm text-[#555555] font-medium mt-4">{item.description === null ? 'Did you come here for something in particular or just general Riker-bashing? And blowing into maximum warp' : item.description}</p>
                     </div>
                 </div>
                 {index === 3 && (

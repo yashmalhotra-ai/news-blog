@@ -9,7 +9,7 @@ const useApiFetch = (api_url) => {
                 const response = await axios.get(api_url)
                 setData(response)
             } catch (error) {
-                console.log("Data can't be fecthed", error);
+                console.error("Data can't be fecthed", error);
             }
         }
         fetchData();
