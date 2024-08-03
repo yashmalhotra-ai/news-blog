@@ -4,6 +4,7 @@ setup react
 -> install tailwindCSS
 -> connected project with github repo
 -> Setup Routing npm i -D react-router-dom
+-> install axios for fetching data
 -> create folder stucture
     scr
     ->Components
